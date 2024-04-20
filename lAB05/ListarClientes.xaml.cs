@@ -8,7 +8,7 @@ namespace lAB05
 {
     public partial class ListarClientes : Window
     {
-        private string connectionString = "Data Source=LAB1504-09\\SQLEXPRESS; Initial Catalog=neptuno; User Id=Fendo; Password=123456";
+        private string connectionString = "Data Source=LAB1504-09\\SQLEXPRESS; Initial Catalog=Neptuno; User Id=Fendo; Password=123456";
 
         public ListarClientes()
         {
@@ -40,6 +40,7 @@ namespace lAB05
                         string Pais = reader.IsDBNull(reader.GetOrdinal("Pais")) ? null : reader.GetString(reader.GetOrdinal("Pais"));
                         string Telefono = reader.IsDBNull(reader.GetOrdinal("Telefono")) ? null : reader.GetString(reader.GetOrdinal("Telefono"));
                         string Fax = reader.IsDBNull(reader.GetOrdinal("Fax")) ? null : reader.GetString(reader.GetOrdinal("Fax"));
+                        bool Activo = reader.GetBoolean(reader.GetOrdinal("Activo"));
 
                         clientes.Add(new Cliente
                         {
@@ -53,7 +54,8 @@ namespace lAB05
                             CodPostal = CodPostal,
                             Pais = Pais,
                             Telefono = Telefono,
-                            Fax = Fax
+                            Fax = Fax,
+                            Activo = Activo
                         });
                     }
                 }
@@ -84,6 +86,7 @@ namespace lAB05
             public string Pais { get; set; }
             public string Telefono { get; set; }
             public string Fax { get; set; }
+            public bool Activo { get; set; }
         }
     }
 }

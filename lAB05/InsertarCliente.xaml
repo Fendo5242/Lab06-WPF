@@ -33,6 +33,8 @@
                     <TextBox x:Name="txtTelefono" Width="200"/>
                     <Label HorizontalAlignment="Center">FAX:</Label>
                     <TextBox x:Name="txtFax" Width="200"/>
+                    <Label HorizontalAlignment="Center">Activo:</Label>
+                    <CheckBox x:Name="checkBox" HorizontalAlignment="Center" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
                     <Button Width="160" Height="30" Margin="5" Background="Yellow" FontWeight="Bold" Click="Button_Click">Insertar</Button>
                 </StackPanel>
             </StackPanel>

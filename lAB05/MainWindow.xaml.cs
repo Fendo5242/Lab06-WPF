@@ -32,5 +32,18 @@ namespace lAB05
             ListarClientes lista = new ListarClientes();
             lista.ShowDialog();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            BuscarID buscar = new BuscarID();
+            buscar.ShowDialog();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            EliminarCliente eliminarCliente = new EliminarCliente();
+            eliminarCliente.ShowDialog();
+        }
     }
 }

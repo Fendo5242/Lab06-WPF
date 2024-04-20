@@ -12,9 +12,27 @@ namespace lAB05
             InitializeComponent();
         }
 
+        private int checkBoxValue = 0;
+
+        public int CheckBoxValue
+        {
+            get { return checkBoxValue; }
+            set { checkBoxValue = value; }
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBoxValue = 1;
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBoxValue = 0;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = "Data Source=LAB1504-09\\SQLEXPRESS; Initial Catalog=neptuno; User Id=Fendo; Password=123456";
+            string connectionString = "Data Source=LAB1504-09\\SQLEXPRESS; Initial Catalog=Neptuno; User Id=Fendo; Password=123456";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -39,6 +57,15 @@ namespace lAB05
                     command.Parameters.AddWithValue("@Pais", txtPais.Text);
                     command.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
                     command.Parameters.AddWithValue("@Fax", txtFax.Text);
+
+                    if (checkBox.IsChecked == true)
+                    {
+                        command.Parameters.AddWithValue("@Activo", 1);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@Activo", 0);
+                    }
 
                     int rowsAffected = command.ExecuteNonQuery();
 

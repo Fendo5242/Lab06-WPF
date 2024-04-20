@@ -14,6 +14,9 @@
                     <Label FontWeight="Bold" HorizontalAlignment="Center">Escoja una opción:</Label>
                     <Button Width="160" Height="30" Margin="5" Background="Yellow" FontWeight="Bold" Click="Button_Click">Insertar nuevo cliente</Button>
                     <Button Width="160" Height="30" Margin="5" Background="Yellow" FontWeight="Bold" Click="Button_Click_1">Listar clientes</Button>
+                    <Button Width="160" Height="30" Margin="5" Background="Yellow" FontWeight="Bold" Click="Button_Click_2">Actualizar clientes</Button>
+                    <Button Width="160" Height="30" Margin="5" Background="Yellow" FontWeight="Bold" Click="Button_Click_3">Eliminar clientes</Button>
+
                 </StackPanel>
             </StackPanel>
         </StackPanel>

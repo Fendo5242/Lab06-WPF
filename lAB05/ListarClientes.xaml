@@ -18,7 +18,7 @@
                             <ColumnDefinition Width="287*"/>
                             <ColumnDefinition Width="363*"/>
                         </Grid.ColumnDefinitions>
-                        <DataGrid x:Name="dataGridClientes" Height="800" Grid.ColumnSpan="2" />
+                        <DataGrid x:Name="dataGridClientes" Height="800" Grid.ColumnSpan="2" IsReadOnly="True" />
                     </Grid>
                 </ScrollViewer>
             </StackPanel>
